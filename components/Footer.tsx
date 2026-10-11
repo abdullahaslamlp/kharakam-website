@@ -13,6 +13,7 @@ export default function Footer() {
                 alt="KharaKam Logo"
                 width={32}
                 height={32}
+                style={{ width: "auto" }}
                 className="h-8 w-auto object-contain"
               />
               <span className="font-title-md text-title-md text-primary font-semibold">

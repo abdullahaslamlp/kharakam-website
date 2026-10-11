@@ -11,9 +11,9 @@ export default function HomePage() {
   return (
     <div className="flex flex-col w-full">
       {/* Section 1: Executive Hero */}
-      <section className="relative w-full bg-surface-container-lowest py-space-xl lg:py-margin-lg border-b border-surface-container">
+      <section className="relative w-full bg-surface-container-lowest py-space-xl lg:py-margin-lg border-b border-surface-container/80">
         <div className="max-w-4xl mx-auto px-margin-sm lg:px-margin-lg text-center flex flex-col items-center gap-space-lg">
-          <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low rounded-full text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+          <div className="inline-flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container-low/90 rounded-full text-secondary font-label-sm text-label-sm uppercase tracking-wider border border-surface-container">
             <span className="w-2 h-2 rounded-full bg-secondary"></span>
             <span>KharaKam LLP</span>
           </div>
@@ -29,7 +29,7 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-space-md pt-space-xs">
             <Link
               href="/connect"
-              className="inline-flex items-center gap-space-xs bg-primary text-on-primary font-title-md text-title-md px-space-lg py-space-md rounded-lg shadow-sm hover:bg-secondary transition-colors duration-150"
+              className="inline-flex items-center gap-space-xs bg-primary text-on-primary font-title-md text-title-md px-space-lg py-space-md rounded-xl shadow-sm hover:bg-secondary apple-pressable"
             >
               <span>Connect With Us</span>
               <span className="material-symbols-outlined text-[18px]">
@@ -38,7 +38,7 @@ export default function HomePage() {
             </Link>
             <Link
               href="/products"
-              className="inline-flex items-center gap-space-xs bg-surface-container-lowest text-primary border border-surface-container font-title-md text-title-md px-space-lg py-space-md rounded-lg hover:bg-surface-container-low transition-colors duration-150"
+              className="inline-flex items-center gap-space-xs bg-surface-container-lowest text-primary border border-surface-container font-title-md text-title-md px-space-lg py-space-md rounded-xl hover:bg-surface-container-low apple-pressable"
             >
               <span>View Products &amp; Solutions</span>
             </Link>
@@ -56,14 +56,14 @@ export default function HomePage() {
             <h2 className="font-headline-lg text-headline-lg text-primary font-semibold tracking-tight">
               Institutional Reliability by Design
             </h2>
-            <p className="font-body-md text-body-md text-on-surface-variant max-w-xl mt-space-xs">
+            <p className="font-body-md text-body-md text-on-surface-variant max-w-xl mt-space-xs leading-relaxed">
               Our governing principles guarantee that every initiative adheres to practical engineering, transparent standards, and localized durability.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
             {/* Pillar 01 */}
-            <div className="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between border border-surface-container transition-all hover:shadow-md">
+            <div className="apple-card p-space-xl rounded-2xl flex flex-col justify-between">
               <div className="flex flex-col gap-space-md">
                 <div className="flex items-center justify-between">
                   <span className="font-label-sm text-label-sm tracking-wider uppercase text-secondary font-semibold">
@@ -83,7 +83,7 @@ export default function HomePage() {
             </div>
 
             {/* Pillar 02 */}
-            <div className="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between border border-surface-container transition-all hover:shadow-md">
+            <div className="apple-card p-space-xl rounded-2xl flex flex-col justify-between">
               <div className="flex flex-col gap-space-md">
                 <div className="flex items-center justify-between">
                   <span className="font-label-sm text-label-sm tracking-wider uppercase text-secondary font-semibold">
@@ -103,7 +103,7 @@ export default function HomePage() {
             </div>
 
             {/* Pillar 03 */}
-            <div className="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between border border-surface-container transition-all hover:shadow-md">
+            <div className="apple-card p-space-xl rounded-2xl flex flex-col justify-between">
               <div className="flex flex-col gap-space-md">
                 <div className="flex items-center justify-between">
                   <span className="font-label-sm text-label-sm tracking-wider uppercase text-secondary font-semibold">
@@ -128,7 +128,7 @@ export default function HomePage() {
       {/* Section 3: Institutional Partner Banner */}
       <section className="w-full bg-surface-container-low py-space-xl border-t border-surface-container">
         <div className="max-w-7xl mx-auto px-margin-sm lg:px-margin-lg">
-          <div className="bg-surface-container-lowest p-space-xl rounded-xl border border-surface-container flex flex-col md:flex-row items-center justify-between gap-space-lg shadow-sm">
+          <div className="bg-surface-container-lowest p-space-xl rounded-2xl border border-surface-container flex flex-col md:flex-row items-center justify-between gap-space-lg shadow-sm">
             <div className="flex flex-col gap-space-xs">
               <span className="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">
                 Direct Communication
@@ -136,14 +136,14 @@ export default function HomePage() {
               <h3 className="font-headline-md text-headline-md text-primary font-semibold">
                 Connect with our engineering and operations team.
               </h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
+              <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
                 Reach out directly to discuss deployments, institutional engagements, or technology partnerships.
               </p>
             </div>
-            <div className="flex flex-wrap items-center gap-space-md">
+            <div className="flex flex-wrap items-center gap-space-md shrink-0">
               <Link
                 href="/connect"
-                className="inline-flex items-center gap-space-xs bg-primary text-on-primary font-title-md text-title-md px-space-lg py-space-md rounded-lg shadow-sm hover:bg-secondary transition-colors duration-150"
+                className="inline-flex items-center gap-space-xs bg-primary text-on-primary font-title-md text-title-md px-space-lg py-space-md rounded-xl shadow-sm hover:bg-secondary apple-pressable"
               >
                 <span>Direct Desk Contact</span>
                 <span className="material-symbols-outlined text-[18px]">
@@ -152,7 +152,7 @@ export default function HomePage() {
               </Link>
               <a
                 href="mailto:kharakamllp@gmail.com"
-                className="inline-flex items-center gap-space-xs bg-surface-container-low text-primary font-title-md text-title-md px-space-lg py-space-md rounded-lg hover:bg-surface-container transition-colors duration-150"
+                className="inline-flex items-center gap-space-xs bg-surface-container-low text-primary font-title-md text-title-md px-space-lg py-space-md rounded-xl hover:bg-surface-container apple-pressable border border-surface-container"
               >
                 <span className="material-symbols-outlined text-[18px]">mail</span>
                 <span>kharakamllp@gmail.com</span>
