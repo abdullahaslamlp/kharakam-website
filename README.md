@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KharaKam Website
 
-## Getting Started
+Official corporate website for **KharaKam LLP**, built with Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS. Converted from Google Stitch UI prototype design export.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- **Executive Homepage (`/`)**: Corporate mission statement, institutional operating pillars, and direct engagement CTAs.
+- **Products Catalogue (`/products`)**:
+  - SafePass Flagship showcase (Smart Campus Dismissal & Gate Logistics System).
+  - Interactive multi-module console modal featuring all 4 deployed workflows:
+    1. Admin Dispatch Queue
+    2. Guardian Check-in
+    3. Transporter Van Sync
+    4. Access Gateway
+  - KharaKam Labs pipeline card.
+- **Connect With Us (`/connect`)**:
+  - Direct institutional contact desks (`kharakamllp@gmail.com` and `@kharakamllp` Instagram).
+  - Interactive inquiry form with input validation, submission loading state, and success feedback.
+  - Configurable webhook support via `NEXT_PUBLIC_CONTACT_ENDPOINT` environment variable.
+- **Responsive Navigation**: Full mobile slide-down hamburger drawer and desktop nav with active indicators.
+- **High-Performance Static Export**: Outputs zero-dependency static files to `out/` ready for hosting on GitHub Pages, Vercel, Netlify, Cloudflare Pages, or AWS S3.
+- **Optimized Typography & Assets**: Google Fonts (`Hanken Grotesk` & `JetBrains Mono`) with Material Symbols Outlined icons and localized brand assets.
+
+---
+
+## 🛠️ Development & Build Commands
+
+Inside `KharaKam/site`:
 
 ```bash
+# Start local development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build production static export (outputs to /out)
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Directory Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+KharaKam/site/
+├── app/
+│   ├── connect/
+│   │   └── page.tsx              # Connect with us page
+│   ├── connect-with-us/
+│   │   └── page.tsx              # URL alias redirecting to /connect
+│   ├── products/
+│   │   └── page.tsx              # Products catalogue page
+│   ├── products-directory/
+│   │   └── page.tsx              # URL alias redirecting to /products
+│   ├── globals.css               # KharaKam theme tokens & typography
+│   ├── icon.png                  # Brand favicon & app icon
+│   ├── layout.tsx                # Global layout with fonts & metadata
+│   └── page.tsx                  # Corporate homepage
+├── components/
+│   ├── ContactForm.tsx           # Interactive contact form
+│   ├── Footer.tsx                # Global corporate footer
+│   ├── Header.tsx                # Responsive navigation header
+│   └── SafePassModal.tsx         # 4-tab interactive SafePass modal
+├── public/
+│   └── images/                   # Normalized brand and console assets
+├── out/                          # Generated static export directory
+├── next.config.ts                # Next.js static export configuration
+└── package.json
+```
